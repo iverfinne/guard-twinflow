@@ -18,10 +18,11 @@ import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { AuthGuard } from './auth.guard';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, MatTableModule, BrowserAnimationsModule, AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, LogoutComponent, LoginComponent, HomeComponent, UsersComponent ],
+  declarations: [ AppComponent, HelloComponent, LogoutComponent, LoginComponent, HomeComponent, UsersComponent, AboutComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ AuthService, AuthGuard,
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }  
