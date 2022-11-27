@@ -1,16 +1,134 @@
 
+<html>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+<style>
+
+.is-paddingless-horizontal { padding-left: 0; padding-right: 0; }
+
+.grid {
+    display: grid;
+    grid-template-columns: 
+    [xl-start] 1fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+}
+
+.grid * { grid-column: md; }
+.grid-xl * { grid-column: xl; }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+</style>
+
+<body>
+  <section class="section is-paddingless-horizontal">
+        <div class="container grid">
+            <nav class="breadcrumb grid-xl" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">Testing</a></li>
+                </ul>
+            </nav>
+        </div>
   </section>
-  </body>
+
+
+    <section class="section is-paddingless-horizontal" style="padding-top: 0px;">
+        <div class="container grid">
+            <article class="media">
+                <figure class="media-left">
+                    <img src="">
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>Iver Raknes Finne</strong>
+                            <a class="is-link">@username_cygnus</a><br>
+                            <span class="has-text-grey">Technical janitor, inspired<br>
+                                <time class="datetime 2018-04-20">Apr 20
+                                    '5 min read
+                                </time>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+
+            <div class="section is-paddingless-horizontal">
+                <h1 class="title is-2">Unreal Engine and Azure Digital Twins</h1>
+                <h2 class="subtitle is-3">using ADT-plugin </h2>
+            </div>
+
+            <div class="columns grid-xl"></div>
+
+            <div class="content is-small">
+                <div class="media">
+                    <img src="../assets/diagram-2.png" alt="">
+                </div>
+                <p>
+
+                </p>
+                <h2>
+                    STEP 1: Deploy Azure Infrastructure
+                </h2>
+                <p>
+                    Most of the setup of the Azure components are automated for the solution. If you want to better understand the components involved on the Azure side, you can walk through the hands-on labs and MS Learn modules.
+                    At a high level, the key Azure components are:
+
+                    <br><li>Azure IoT Hub 
+                    - this is the primary connection point for IoT devices in the Azure cloud. It ingests the telemetry data from our (simulated) IoT sensors.
+                    </li>
+                    <li>Azure Digital Twins - this is the primary Azure service being demonstrated in this sample. ADT allows you to model the 'real world' and add critical business context, hierarchy, and enriched information to the raw telemetry data ingested from IoT Hub
+                    </li>
+                    <li>Azure SignalR Service  - 
+                    SignalR is a high scale, high performance pub-sub service hosted in Azure. It allows a sender to submit messages in real time to a large number of simultaneous listening applications. In the sample here, we will only have one listener, but for the playable sample demo, we may have many listening
+                    </li>
+                    <li>Azure Time Series Insights
+                    Time Series Insights is a time-series store, query, and dashboarding service. For this solution, we leverage this as the store and rendering mechanism for the historical data graphs for the sensors
+                    </li>
+                    <li>
+                    Event Grid and Azure Functions
+                    - these components act as the routing and glue between the major components. Event Grid routes messages to the functions in response to events (telemetry received or twin data updated) and the functions perform message transformation and updating.</li><br>
+                    Follow <a class="strong" href=""> <strong>these instructions </strong></a>to deploy the backend Azure services involved. Note that there is a configuration file that will be generated during this process that you will need to download and keep for the next step.
+
+                </p>
+                <h2>STEP 2: Configure Unreal Connections to Azure</h2>
+                <p>
+                    Following these instructions will get you set up with the ADT Link plugin for Unreal Engine and walks you through steps required for establishing a connection to ADT and creating virtual sensors in the example scene.
+                </p>
+                <h2>STEP 3: Simulate Devices</h2>
+                <p>
+                    The next step is to simulate device data from our building IoT sensors. To set up the simulated devices, follow the instructions from sample case integrating .json here.
+                </p>
+                <h2>STEP 4: Unreal Engine configuration</h2>
+                <p>
+                    After following the steps above you should end up with a UE-scene that visualizes live data coming from your own Azure Digital Twin instance. You can then define and deploy your own virtual sensors to customize it to your needs. 
+                </p>
+                <h2>STEP 5: CAD-files preparation for datasmith</h2>
+                <p>
+                    ADTLink plugin can automatically detect and place devices (twins) in your scene based on the contents of your Datasmith file. This quick guide will show you how to prepare your own CAD model with the right metadata before exporting it as a Datasmith file.<br><br>
+                    Example using Revit is found below, but any CAD or BIM software that exports to Datasmith will be similar. This sample file can be downloaded from GitHub here
+
+                </p>
+                <h2>STEP 6: Custom models</h2>
+                <p>
+                    Creating custom model blueprints using Azure Digital Twins ecosystem with your own real devices, sensors, and models, then you'll need to define your models with these steps.<br> <br> To define your own custom models for your sensors or other twins, follow this guide.
+
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+
+  
+</html>

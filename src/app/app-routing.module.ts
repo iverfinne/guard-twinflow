@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
 import { AuthGuard } from './auth.guard';
+import { DemoComponent } from './demo/demo.component';
 
 const routes: Routes = [
   { path: '' , redirectTo:'/login', pathMatch:'full'},
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: 'home', component: HomeComponent},
   { path: 'about', component: AboutComponent},
+  { path: 'demo', component: DemoComponent},
   { path: 'users', component: UsersComponent, canActivate: [AuthGuard] }
 ];
 
