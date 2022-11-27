@@ -17,7 +17,7 @@
             <nav class="breadcrumb grid-xl" aria-label="breadcrumbs">
                 <ul>
                     <li><a href="#">About</a></li>
-                    <li class="is-active"><a href="#" aria-current="page">Testing</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">docs</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,7 +34,7 @@
                     <div class="content">
                         <p>
                             <strong>Iver Raknes Finne</strong>
-                            <a class="is-link">@username_cygnus</a><br>
+                            <a class="is-link">    @username_cygnus</a><br>
                             <span class="has-text-grey">Technical janitor, inspired<br>
                                 <time class="datetime 2018-04-20">Apr 20
                                     '5 min read
@@ -47,22 +47,22 @@
 
 
             <div class="section is-paddingless-horizontal">
-                <h1 class="title is-2">Unreal Engine and Azure Digital Twins</h1>
-                <h2 class="subtitle is-3">using ADT-plugin </h2>
+                <h1 class="title is-2">Implementing Unreal Engine and Azure Digital Twins</h1>
+                <h2 class="subtitle is-3"> - using ADT-plugin </h2>
             </div>
 
             <div class="columns grid-xl"></div>
 
-            <div class="content is-small">
+            <div class="content is-medium">
                 <div class="media">
                     <img src="../assets/diagram-2.png" alt="">
                 </div>
                 <p>
 
                 </p>
-                <h2>
+                <h3>
                     STEP 1: Deploy Azure Infrastructure
-                </h2>
+                </h3>
                 <p>
                     Most of the setup of the Azure components are automated for the solution. If you want to better understand the components involved on the Azure side, you can walk through the hands-on labs and MS Learn modules.
                     At a high level, the key Azure components are:
@@ -84,25 +84,25 @@
                     Follow <a class="strong" href=""> <strong>these instructions </strong></a>to deploy the backend Azure services involved. Note that there is a configuration file that will be generated during this process that you will need to download and keep for the next step.
 
                 </p>
-                <h2>STEP 2: Configure Unreal Connections to Azure</h2>
+                <h3>STEP 2: Configure Unreal Connections to Azure</h3>
                 <p>
                     Following these instructions will get you set up with the ADT Link plugin for Unreal Engine and walks you through steps required for establishing a connection to ADT and creating virtual sensors in the example scene.
                 </p>
-                <h2>STEP 3: Simulate Devices</h2>
+                <h3>STEP 3: Simulate Devices</h3>
                 <p>
                     The next step is to simulate device data from our building IoT sensors. To set up the simulated devices, follow the instructions from sample case integrating .json here.
                 </p>
-                <h2>STEP 4: Unreal Engine configuration</h2>
+                <h3>STEP 4: Unreal Engine configuration</h3>
                 <p>
                     After following the steps above you should end up with a UE-scene that visualizes live data coming from your own Azure Digital Twin instance. You can then define and deploy your own virtual sensors to customize it to your needs. 
                 </p>
-                <h2>STEP 5: CAD-files preparation for datasmith</h2>
+                <h3>STEP 5: CAD-files preparation for datasmith</h3>
                 <p>
                     ADTLink plugin can automatically detect and place devices (twins) in your scene based on the contents of your Datasmith file. This quick guide will show you how to prepare your own CAD model with the right metadata before exporting it as a Datasmith file.<br><br>
                     Example using Revit is found below, but any CAD or BIM software that exports to Datasmith will be similar. This sample file can be downloaded from GitHub here
 
                 </p>
-                <h2>STEP 6: Custom models</h2>
+                <h3>STEP 6: Custom models</h3>
                 <p>
                     Creating custom model blueprints using Azure Digital Twins ecosystem with your own real devices, sensors, and models, then you'll need to define your models with these steps.<br> <br> To define your own custom models for your sensors or other twins, follow this guide.
 

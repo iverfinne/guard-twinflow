@@ -1,0 +1,8 @@
+/* remove margins and padding and set height to 100% */
+
+/*  */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

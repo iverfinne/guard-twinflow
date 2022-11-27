@@ -1,0 +1,58 @@
+[debug] [2022-11-27T02:08:29.238Z] ----------------------------------------------------------------------
+[debug] [2022-11-27T02:08:29.239Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\NOIVFIN\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-11-27T02:08:29.240Z] CLI Version:   11.16.1
+[debug] [2022-11-27T02:08:29.240Z] Platform:      win32
+[debug] [2022-11-27T02:08:29.240Z] Node Version:  v18.12.1
+[debug] [2022-11-27T02:08:29.241Z] Time:          Sun Nov 27 2022 03:08:29 GMT+0100 (Central European Standard Time)
+[debug] [2022-11-27T02:08:29.241Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-27T02:08:29.243Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-11-27T02:08:29.333Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-27T02:08:29.333Z] > authorizing via signed-in user (iverfinne@gmail.com)
+[debug] [2022-11-27T02:08:29.333Z] [iam] checking project twinflow-px for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-27T02:08:29.334Z] > refreshing access token with scopes: []
+[debug] [2022-11-27T02:08:29.335Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-11-27T02:08:29.335Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-27T02:08:29.479Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-11-27T02:08:29.479Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-27T02:08:29.487Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/twinflow-px:testIamPermissions [none]
+[debug] [2022-11-27T02:08:29.487Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/twinflow-px:testIamPermissions x-goog-quota-user=projects/twinflow-px
+[debug] [2022-11-27T02:08:29.487Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twinflow-px:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-27T02:08:29.654Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-11-27T02:08:29.654Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-11-27T02:08:30.259Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/twinflow-px:testIamPermissions 200
+[debug] [2022-11-27T02:08:30.259Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twinflow-px:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-27T02:08:30.260Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twinflow-px [none]
+[debug] [2022-11-27T02:08:30.605Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/twinflow-px 200
+[debug] [2022-11-27T02:08:30.605Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/twinflow-px {"projectId":"twinflow-px","projectNumber":"889716748621","displayName":"twinflow-px","name":"projects/twinflow-px","resources":{"hostingSite":"twinflow-px","realtimeDatabaseInstance":"twinflow-px-default-rtdb"},"state":"ACTIVE","etag":"1_3e2ac197-3f33-4ce7-a549-52a3cc7128d0"}
+[info] 
+[info] === Deploying to 'twinflow-px'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-11-27T02:08:30.611Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/twinflow-px/versions [none]
+[debug] [2022-11-27T02:08:30.611Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/twinflow-px/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-11-27T02:08:31.860Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/twinflow-px/versions 200
+[debug] [2022-11-27T02:08:31.860Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/twinflow-px/versions {"name":"projects/889716748621/sites/twinflow-px/versions/fc8b8478dbdd238a","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[twinflow-px]: beginning deploy... 
+[info] i  hosting[twinflow-px]: found 11 files in dist 
+[debug] [2022-11-27T02:08:31.873Z] [hosting] uploading with 200 concurrency
+[debug] [2022-11-27T02:08:32.023Z] [hosting] hash cache [ZGlzdA] stored for 11 files
+[debug] [2022-11-27T02:08:32.024Z] [hosting][hash queue][FINAL] {"max":142,"min":4,"avg":28.545454545454547,"active":0,"complete":11,"success":11,"errored":0,"retried":0,"total":11,"elapsed":148}
+[debug] [2022-11-27T02:08:32.024Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/889716748621/sites/twinflow-px/versions/fc8b8478dbdd238a:populateFiles [none]
+[debug] [2022-11-27T02:08:32.024Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/889716748621/sites/twinflow-px/versions/fc8b8478dbdd238a:populateFiles {"files":{"/favicon.ico":"2c19690e9587bae12f419b34d2edeecc76808099540a9c9f4ea6194116cfc8f7","/index.html":"1707368f8ee4a8df76aa0cf923ce6a788e45708c9dd0558d895f526f42df8a6c","/runtime.ab2623a0ac304477.js":"0cf450164aa71c8f9db00355dc28d1d8710309bc4da178091279ea0dec08d2d5","/3rdpartylicenses.txt":"5de1ba4785fa3e9df4ac64694102999fdcf5e2506750cbaefcc064b369b09eab","/styles.6ac6a01b293e3643.css":"5d9d41aded2965e990e5cabb20550319ef2fb8c5981171b0ba9ee6b325de2177","/polyfills.f0e34e2f4829f464.js":"2eba5a72a6091a2d8441b742d6b393330feedbb6314cc46c633c44dab424b123","/assets/logo/abb.png":"8a2f065010333f70cb5dc443209e32fe7c48f96532cf7a13fa296e238eac0e4e","/assets/diagram-2.png":"4b95f35233deac4e973cad860d0a37a14072a1879904848aa03690f3a6d13073","/assets/diagram-1.png":"5556c62555f7f36a1438c23b323264cd574c25ea75c075a8909ac5f5cf42e0d4","/main.4c557e69c5ecda4e.js":"685feff47fe77b7b911ff9ee32efaa20ffdde7d783a3674b77c205a6770c412f","/assets/hero-1.png":"3bbb65f65ffe00e79abeddb5319a150bbb0d9175edb42db656eda02d94bb4f88"}}
+[debug] [2022-11-27T02:08:32.997Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/889716748621/sites/twinflow-px/versions/fc8b8478dbdd238a:populateFiles 200
+[debug] [2022-11-27T02:08:32.997Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/889716748621/sites/twinflow-px/versions/fc8b8478dbdd238a:populateFiles {"uploadRequiredHashes":["5d9d41aded2965e990e5cabb20550319ef2fb8c5981171b0ba9ee6b325de2177","4b95f35233deac4e973cad860d0a37a14072a1879904848aa03690f3a6d13073","685feff47fe77b7b911ff9ee32efaa20ffdde7d783a3674b77c205a6770c412f","1707368f8ee4a8df76aa0cf923ce6a788e45708c9dd0558d895f526f42df8a6c","5556c62555f7f36a1438c23b323264cd574c25ea75c075a8909ac5f5cf42e0d4","3bbb65f65ffe00e79abeddb5319a150bbb0d9175edb42db656eda02d94bb4f88"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files"}
+[debug] [2022-11-27T02:08:32.998Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files/5d9d41aded2965e990e5cabb20550319ef2fb8c5981171b0ba9ee6b325de2177 [none]
+[debug] [2022-11-27T02:08:32.998Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files/5d9d41aded2965e990e5cabb20550319ef2fb8c5981171b0ba9ee6b325de2177 [stream]
+[debug] [2022-11-27T02:08:32.999Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files/4b95f35233deac4e973cad860d0a37a14072a1879904848aa03690f3a6d13073 [none]
+[debug] [2022-11-27T02:08:32.999Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files/4b95f35233deac4e973cad860d0a37a14072a1879904848aa03690f3a6d13073 [stream]
+[debug] [2022-11-27T02:08:33.001Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files/685feff47fe77b7b911ff9ee32efaa20ffdde7d783a3674b77c205a6770c412f [none]
+[debug] [2022-11-27T02:08:33.001Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files/685feff47fe77b7b911ff9ee32efaa20ffdde7d783a3674b77c205a6770c412f [stream]
+[debug] [2022-11-27T02:08:33.002Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files/1707368f8ee4a8df76aa0cf923ce6a788e45708c9dd0558d895f526f42df8a6c [none]
+[debug] [2022-11-27T02:08:33.002Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files/1707368f8ee4a8df76aa0cf923ce6a788e45708c9dd0558d895f526f42df8a6c [stream]
+[debug] [2022-11-27T02:08:33.003Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files/5556c62555f7f36a1438c23b323264cd574c25ea75c075a8909ac5f5cf42e0d4 [none]
+[debug] [2022-11-27T02:08:33.003Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files/5556c62555f7f36a1438c23b323264cd574c25ea75c075a8909ac5f5cf42e0d4 [stream]
+[debug] [2022-11-27T02:08:33.005Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files/3bbb65f65ffe00e79abeddb5319a150bbb0d9175edb42db656eda02d94bb4f88 [none]
+[debug] [2022-11-27T02:08:33.005Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twinflow-px/versions/fc8b8478dbdd238a/files/3bbb65f65ffe00e79abeddb5319a150bbb0d9175edb42db656eda02d94bb4f88 [stream]
+[debug] [2022-11-27T02:08:33.006Z] [hosting][populate queue][FINAL] {"max":976,"min":976,"avg":976,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":984}
+[debug] [2022-11-27T02:08:33.006Z] [hosting] uploads queued: 6

@@ -1,0 +1,16 @@
+/* remove the default padding and margin from the body */
+body {
+  margin: 0;
+  padding: 0;
+}
+/* set the background image */
+body {
+  background-image: url('https://images.unsplash.com/photo-1519680772-3b1b1b1b1b1b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b&auto=format&fit=crop&w=1350&q=80');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* set the background color */
+body {
+  background-color: #cccccc;
+}
