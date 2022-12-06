@@ -21,9 +21,12 @@ import { AuthGuard } from './auth.guard';
 import { AboutComponent } from './about/about.component';
 import { DemoComponent } from './demo/demo.component';
 import { DocsComponent } from './docs/docs.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule, MatTableModule, BrowserAnimationsModule, AppRoutingModule ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, MatTableModule, BrowserAnimationsModule, AppRoutingModule, PdfViewerModule,  ],
   declarations: [ AppComponent, HelloComponent, LogoutComponent, LoginComponent, HomeComponent, UsersComponent, AboutComponent, DemoComponent, DocsComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ AuthService, AuthGuard,
